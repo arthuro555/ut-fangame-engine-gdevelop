@@ -81,6 +81,7 @@
   "objects": [
     {
       "name": "background",
+      "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
@@ -119,6 +120,7 @@
     },
     {
       "name": "NewObject",
+      "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
@@ -479,6 +481,7 @@
       "italic": false,
       "name": "text",
       "smoothed": true,
+      "tags": "",
       "type": "TextObject::Text",
       "underlined": false,
       "variables": [],

@@ -76,6 +76,7 @@
   "objects": [
     {
       "name": "bg",
+      "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
@@ -117,6 +118,7 @@
       "italic": false,
       "name": "loading",
       "smoothed": true,
+      "tags": "",
       "type": "TextObject::Text",
       "underlined": false,
       "variables": [],
@@ -135,6 +137,7 @@
       "italic": false,
       "name": "login",
       "smoothed": true,
+      "tags": "",
       "type": "TextObject::Text",
       "underlined": false,
       "variables": [],

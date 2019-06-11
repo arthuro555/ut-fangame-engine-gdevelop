@@ -8,7 +8,7 @@
   },
   "properties": {
     "adMobAppId": "",
-    "folderProject": false,
+    "folderProject": true,
     "linuxExecutableFilename": "",
     "macExecutableFilename": "",
     "orientation": "landscape",
@@ -1585,6 +1585,22 @@
         "metadata": "",
         "name": "audio\\mus_battle1.ogg",
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Sprites/titlebg (2).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sprites\\titlebg (2).png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "audio/mus_menu0.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio\\mus_menu0.ogg",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1676,6 +1692,7 @@
       "objects": [
         {
           "name": "background",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -1714,6 +1731,7 @@
         },
         {
           "name": "NewObject",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -2074,6 +2092,7 @@
           "italic": false,
           "name": "text",
           "smoothed": true,
+          "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
@@ -3709,11 +3728,14 @@
       "objects": [
         {
           "name": "Player",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
           "behaviors": [
             {
+              "name": "TopDownMovement",
+              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "acceleration": 100000000000000000,
               "allowDiagonals": true,
               "angleOffset": 0,
@@ -3721,9 +3743,7 @@
               "deceleration": 800,
               "ignoreDefaultControls": false,
               "maxSpeed": 200,
-              "name": "TopDownMovement",
-              "rotateObject": false,
-              "type": "TopDownMovementBehavior::TopDownMovementBehavior"
+              "rotateObject": false
             }
           ],
           "animations": [
@@ -4547,6 +4567,7 @@
         },
         {
           "name": "background",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -4585,6 +4606,7 @@
         },
         {
           "name": "trigger",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [
@@ -4657,6 +4679,7 @@
         },
         {
           "name": "collision",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -4727,6 +4750,7 @@
           "italic": false,
           "name": "NewObject",
           "smoothed": true,
+          "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
@@ -5566,7 +5590,7 @@
           "customSize": true,
           "height": 603,
           "layer": "",
-          "locked": false,
+          "locked": true,
           "name": "Black",
           "width": 804,
           "x": -3,
@@ -5713,12 +5737,12 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 33,
           "layer": "",
           "locked": false,
           "name": "text",
-          "width": 0,
+          "width": 674,
           "x": 62,
           "y": 309,
           "zOrder": 11,
@@ -5760,6 +5784,7 @@
       "objects": [
         {
           "name": "Black",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -5798,6 +5823,7 @@
         },
         {
           "name": "fight",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -5865,6 +5891,7 @@
         },
         {
           "name": "Act",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -5932,6 +5959,7 @@
         },
         {
           "name": "Item",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -5999,6 +6027,7 @@
         },
         {
           "name": "Mercy",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -6066,6 +6095,7 @@
         },
         {
           "name": "soul",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [
@@ -6076,6 +6106,8 @@
           ],
           "behaviors": [
             {
+              "name": "PlatformerObject",
+              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "acceleration": 1500,
               "canGrabPlatforms": false,
               "deceleration": 1500,
@@ -6084,10 +6116,8 @@
               "jumpSpeed": 600,
               "maxFallingSpeed": 700,
               "maxSpeed": 250,
-              "name": "PlatformerObject",
               "roundCoordinates": false,
               "slopeMaxAngle": 60,
-              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "xGrabTolerance": 10,
               "yGrabOffset": 0
             }
@@ -6915,15 +6945,16 @@
         },
         {
           "name": "boxright",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
           "behaviors": [
             {
-              "canBeGrabbed": false,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": false,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ],
@@ -6961,15 +6992,16 @@
         },
         {
           "name": "boxleft",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
           "behaviors": [
             {
-              "canBeGrabbed": false,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": false,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ],
@@ -7007,15 +7039,16 @@
         },
         {
           "name": "boxbordersup",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
           "behaviors": [
             {
-              "canBeGrabbed": false,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": false,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ],
@@ -7053,15 +7086,16 @@
         },
         {
           "name": "boxborderdown",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
           "behaviors": [
             {
-              "canBeGrabbed": false,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": false,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ],
@@ -7102,6 +7136,7 @@
           "italic": false,
           "name": "text",
           "smoothed": true,
+          "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
@@ -7117,6 +7152,7 @@
         },
         {
           "name": "froggithead",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -7172,6 +7208,7 @@
         },
         {
           "name": "froggitbody",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -7583,7 +7620,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "textbox",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9526,6 +9563,7 @@
       "objects": [
         {
           "name": "bg",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -9567,6 +9605,7 @@
           "italic": false,
           "name": "loading",
           "smoothed": true,
+          "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
@@ -9585,6 +9624,7 @@
           "italic": false,
           "name": "login",
           "smoothed": true,
+          "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
@@ -9737,13 +9777,17 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.9688
+        "zoomFactor": 0.9672
       },
       "objectsGroups": [],
       "variables": [
         {
           "name": "phase",
           "value": "0"
+        },
+        {
+          "name": "PName",
+          "value": "\"Chara\""
         }
       ],
       "instances": [
@@ -9876,8 +9920,113 @@
           "name": "flowey",
           "width": 53,
           "x": 373,
-          "y": 466,
-          "zOrder": 1,
+          "y": 473,
+          "zOrder": 666,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 629,
+          "layer": "",
+          "locked": false,
+          "name": "bg",
+          "width": 659,
+          "x": 68,
+          "y": -29,
+          "zOrder": 66,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "Continue",
+          "width": 111,
+          "x": 274,
+          "y": 296,
+          "zOrder": 667,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Reset",
+          "width": 0,
+          "x": 422,
+          "y": 297,
+          "zOrder": 668,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Name",
+          "width": 0,
+          "x": 262,
+          "y": 203,
+          "zOrder": 669,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "LOVE",
+          "width": 0,
+          "x": 367,
+          "y": 202,
+          "zOrder": 670,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Time",
+          "width": 0,
+          "x": 479,
+          "y": 201,
+          "zOrder": 671,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Location",
+          "width": 0,
+          "x": 277,
+          "y": 248,
+          "zOrder": 672,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -9886,6 +10035,7 @@
       "objects": [
         {
           "name": "utlogo",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -9956,6 +10106,7 @@
           "italic": false,
           "name": "pressz",
           "smoothed": true,
+          "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [
@@ -9979,6 +10130,7 @@
           "italic": false,
           "name": "epn",
           "smoothed": true,
+          "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
@@ -9994,6 +10146,7 @@
         },
         {
           "name": "name",
+          "tags": "",
           "type": "TextEntryObject::TextEntry",
           "variables": [],
           "behaviors": []
@@ -10003,6 +10156,7 @@
           "italic": false,
           "name": "namefield",
           "smoothed": true,
+          "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
@@ -10021,6 +10175,7 @@
           "italic": false,
           "name": "no",
           "smoothed": true,
+          "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
@@ -10039,6 +10194,7 @@
           "italic": false,
           "name": "yes",
           "smoothed": true,
+          "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
@@ -10054,6 +10210,7 @@
         },
         {
           "name": "bg",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -10069,7 +10226,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Sprites\\titlebg.png",
+                      "image": "Sprites\\titlebg (2).png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -10092,6 +10249,7 @@
         },
         {
           "name": "flowey",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -10127,6 +10285,130 @@
               ]
             }
           ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Continue",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "name": "KonamiCode",
+              "type": "KonamiCode::KonamiCode"
+            }
+          ],
+          "string": "Continue",
+          "font": "DTM-Sans.ttf",
+          "characterSize": 24,
+          "color": {
+            "b": 28,
+            "g": 231,
+            "r": 248
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Reset",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "name": "KonamiCode",
+              "type": "KonamiCode::KonamiCode"
+            }
+          ],
+          "string": "Reset",
+          "font": "DTM-Sans.ttf",
+          "characterSize": 24,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Name",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Chara",
+          "font": "DTM-Sans.ttf",
+          "characterSize": 24,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "LOVE",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "LV 20",
+          "font": "DTM-Sans.ttf",
+          "characterSize": 24,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Time",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "66:66",
+          "font": "DTM-Sans.ttf",
+          "characterSize": 24,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Location",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Judgement Hall",
+          "font": "DTM-Sans.ttf",
+          "characterSize": 24,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
         }
       ],
       "events": [
@@ -10189,6 +10471,26 @@
                     "value": "Cache"
                   },
                   "parameters": [
+                    "flowey"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "bg"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
                     "pressz"
                   ],
                   "subInstructions": []
@@ -10226,11 +10528,83 @@
                 {
                   "type": {
                     "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Name"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Time"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Location"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "LOVE"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Reset"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Continue"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
                     "value": "TextEntryObject::Activate"
                   },
                   "parameters": [
                     "name",
                     "no"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "init",
+                    "=",
+                    "0"
                   ],
                   "subInstructions": []
                 }
@@ -10246,7 +10620,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "intro",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -11473,7 +11847,698 @@
           "name": "menu",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "events": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "phase",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "init",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "flowey",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "Time",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "Reset",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "LOVE",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "Name",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "Location",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "Continue",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "bg",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "audio\\mus_menu0.ogg",
+                    "yes",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "init",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"time\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "continue",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "poup",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"lulu\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "LireFichierTxt"
+                  },
+                  "parameters": [
+                    "\"save\"",
+                    "\"player/name\"",
+                    "namefield.String()",
+                    "PName"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "Name",
+                    "=",
+                    "VariableString(PName)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "phase",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "init",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "",
+                    "0.5",
+                    "\"time\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "init",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "phase",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "init",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "Name",
+                    "=",
+                    "VariableString(PName)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Right"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "continue",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "poup",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::ChangeColor"
+                          },
+                          "parameters": [
+                            "Reset",
+                            "\"248;231;28\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::ChangeColor"
+                          },
+                          "parameters": [
+                            "Continue",
+                            "\"255;255;255\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "continue",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "poup",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "continue",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "poup",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::ChangeColor"
+                          },
+                          "parameters": [
+                            "Continue",
+                            "\"248;231;28\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::ChangeColor"
+                          },
+                          "parameters": [
+                            "Reset",
+                            "\"255;255;255\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::ChangeColor"
+                          },
+                          "parameters": [
+                            "Reset",
+                            "\"255;255;255\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "continue",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "poup",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Timer"
+                      },
+                      "parameters": [
+                        "",
+                        "0.3",
+                        "\"lulu\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "poup",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"lulu\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "z"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Return"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "continue",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Scene"
+                          },
+                          "parameters": [
+                            "",
+                            "\"overworld\"",
+                            "yes"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "continue",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Scene"
+                          },
+                          "parameters": [
+                            "",
+                            "\"deletesave\"",
+                            "yes"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
           "parameters": []
         }
       ],
@@ -11496,7 +12561,12 @@
           "effects": []
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "KonamiCode",
+          "type": "KonamiCode::KonamiCode"
+        }
+      ]
     },
     {
       "b": 209,
@@ -11810,6 +12880,7 @@
           "italic": false,
           "name": "u",
           "smoothed": true,
+          "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
@@ -11828,6 +12899,7 @@
           "italic": false,
           "name": "t",
           "smoothed": true,
+          "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
@@ -11843,6 +12915,7 @@
         },
         {
           "name": "bg",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -11881,18 +12954,21 @@
         },
         {
           "name": "ui",
+          "tags": "",
           "type": "TextEntryObject::TextEntry",
           "variables": [],
           "behaviors": []
         },
         {
           "name": "ti",
+          "tags": "",
           "type": "TextEntryObject::TextEntry",
           "variables": [],
           "behaviors": []
         },
         {
           "name": "line",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -11963,6 +13039,7 @@
           "italic": false,
           "name": "tui",
           "smoothed": true,
+          "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
@@ -11981,6 +13058,7 @@
           "italic": false,
           "name": "uui",
           "smoothed": true,
+          "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
@@ -11996,6 +13074,7 @@
         },
         {
           "name": "okbtn",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -12037,6 +13116,7 @@
           "italic": false,
           "name": "Back",
           "smoothed": true,
+          "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
@@ -12433,7 +13513,8 @@
               "folded": false,
               "type": "BuiltinCommonInstructions::JsCode",
               "inlineCode": "/*\n * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message\n * Digest Algorithm, as defined in RFC 1321.\n * Copyright (C) Paul Johnston 1999 - 2000.\n * Updated by Greg Holt 2000 - 2001.\n * See http://pajhome.org.uk/site/legal.html for details.\n */\n\n/*\n * Convert a 32-bit number to a hex string with ls-byte first\n */\nvar hex_chr = \"0123456789abcdef\";\nfunction rhex(num)\n{\n  str = \"\";\n  for(j = 0; j <= 3; j++)\n    str += hex_chr.charAt((num >> (j * 8 + 4)) & 0x0F) +\n           hex_chr.charAt((num >> (j * 8)) & 0x0F);\n  return str;\n}\n\n/*\n * Convert a string to a sequence of 16-word blocks, stored as an array.\n * Append padding bits and the length, as described in the MD5 standard.\n */\nfunction str2blks_MD5(str)\n{\n  nblk = ((str.length + 8) >> 6) + 1;\n  blks = new Array(nblk * 16);\n  for(i = 0; i < nblk * 16; i++) blks[i] = 0;\n  for(i = 0; i < str.length; i++)\n    blks[i >> 2] |= str.charCodeAt(i) << ((i % 4) * 8);\n  blks[i >> 2] |= 0x80 << ((i % 4) * 8);\n  blks[nblk * 16 - 2] = str.length * 8;\n  return blks;\n}\n\n/*\n * Add integers, wrapping at 2^32. This uses 16-bit operations internally \n * to work around bugs in some JS interpreters.\n */\nfunction add(x, y)\n{\n  var lsw = (x & 0xFFFF) + (y & 0xFFFF);\n  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);\n  return (msw << 16) | (lsw & 0xFFFF);\n}\n\n/*\n * Bitwise rotate a 32-bit number to the left\n */\nfunction rol(num, cnt)\n{\n  return (num << cnt) | (num >>> (32 - cnt));\n}\n\n/*\n * These functions implement the basic operation for each round of the\n * algorithm.\n */\nfunction cmn(q, a, b, x, s, t)\n{\n  return add(rol(add(add(a, q), add(x, t)), s), b);\n}\nfunction ff(a, b, c, d, x, s, t)\n{\n  return cmn((b & c) | ((~b) & d), a, b, x, s, t);\n}\nfunction gg(a, b, c, d, x, s, t)\n{\n  return cmn((b & d) | (c & (~d)), a, b, x, s, t);\n}\nfunction hh(a, b, c, d, x, s, t)\n{\n  return cmn(b ^ c ^ d, a, b, x, s, t);\n}\nfunction ii(a, b, c, d, x, s, t)\n{\n  return cmn(c ^ (b | (~d)), a, b, x, s, t);\n}\n\n/*\n * Take a string and return the hex representation of its MD5.\n */\nfunction calcMD5(str)\n{\n  x = str2blks_MD5(str);\n  a =  1732584193;\n  b = -271733879;\n  c = -1732584194;\n  d =  271733878;\n\n  for(i = 0; i < x.length; i += 16)\n  {\n    olda = a;\n    oldb = b;\n    oldc = c;\n    oldd = d;\n\n    a = ff(a, b, c, d, x[i+ 0], 7 , -680876936);\n    d = ff(d, a, b, c, x[i+ 1], 12, -389564586);\n    c = ff(c, d, a, b, x[i+ 2], 17,  606105819);\n    b = ff(b, c, d, a, x[i+ 3], 22, -1044525330);\n    a = ff(a, b, c, d, x[i+ 4], 7 , -176418897);\n    d = ff(d, a, b, c, x[i+ 5], 12,  1200080426);\n    c = ff(c, d, a, b, x[i+ 6], 17, -1473231341);\n    b = ff(b, c, d, a, x[i+ 7], 22, -45705983);\n    a = ff(a, b, c, d, x[i+ 8], 7 ,  1770035416);\n    d = ff(d, a, b, c, x[i+ 9], 12, -1958414417);\n    c = ff(c, d, a, b, x[i+10], 17, -42063);\n    b = ff(b, c, d, a, x[i+11], 22, -1990404162);\n    a = ff(a, b, c, d, x[i+12], 7 ,  1804603682);\n    d = ff(d, a, b, c, x[i+13], 12, -40341101);\n    c = ff(c, d, a, b, x[i+14], 17, -1502002290);\n    b = ff(b, c, d, a, x[i+15], 22,  1236535329);    \n\n    a = gg(a, b, c, d, x[i+ 1], 5 , -165796510);\n    d = gg(d, a, b, c, x[i+ 6], 9 , -1069501632);\n    c = gg(c, d, a, b, x[i+11], 14,  643717713);\n    b = gg(b, c, d, a, x[i+ 0], 20, -373897302);\n    a = gg(a, b, c, d, x[i+ 5], 5 , -701558691);\n    d = gg(d, a, b, c, x[i+10], 9 ,  38016083);\n    c = gg(c, d, a, b, x[i+15], 14, -660478335);\n    b = gg(b, c, d, a, x[i+ 4], 20, -405537848);\n    a = gg(a, b, c, d, x[i+ 9], 5 ,  568446438);\n    d = gg(d, a, b, c, x[i+14], 9 , -1019803690);\n    c = gg(c, d, a, b, x[i+ 3], 14, -187363961);\n    b = gg(b, c, d, a, x[i+ 8], 20,  1163531501);\n    a = gg(a, b, c, d, x[i+13], 5 , -1444681467);\n    d = gg(d, a, b, c, x[i+ 2], 9 , -51403784);\n    c = gg(c, d, a, b, x[i+ 7], 14,  1735328473);\n    b = gg(b, c, d, a, x[i+12], 20, -1926607734);\n    \n    a = hh(a, b, c, d, x[i+ 5], 4 , -378558);\n    d = hh(d, a, b, c, x[i+ 8], 11, -2022574463);\n    c = hh(c, d, a, b, x[i+11], 16,  1839030562);\n    b = hh(b, c, d, a, x[i+14], 23, -35309556);\n    a = hh(a, b, c, d, x[i+ 1], 4 , -1530992060);\n    d = hh(d, a, b, c, x[i+ 4], 11,  1272893353);\n    c = hh(c, d, a, b, x[i+ 7], 16, -155497632);\n    b = hh(b, c, d, a, x[i+10], 23, -1094730640);\n    a = hh(a, b, c, d, x[i+13], 4 ,  681279174);\n    d = hh(d, a, b, c, x[i+ 0], 11, -358537222);\n    c = hh(c, d, a, b, x[i+ 3], 16, -722521979);\n    b = hh(b, c, d, a, x[i+ 6], 23,  76029189);\n    a = hh(a, b, c, d, x[i+ 9], 4 , -640364487);\n    d = hh(d, a, b, c, x[i+12], 11, -421815835);\n    c = hh(c, d, a, b, x[i+15], 16,  530742520);\n    b = hh(b, c, d, a, x[i+ 2], 23, -995338651);\n\n    a = ii(a, b, c, d, x[i+ 0], 6 , -198630844);\n    d = ii(d, a, b, c, x[i+ 7], 10,  1126891415);\n    c = ii(c, d, a, b, x[i+14], 15, -1416354905);\n    b = ii(b, c, d, a, x[i+ 5], 21, -57434055);\n    a = ii(a, b, c, d, x[i+12], 6 ,  1700485571);\n    d = ii(d, a, b, c, x[i+ 3], 10, -1894986606);\n    c = ii(c, d, a, b, x[i+10], 15, -1051523);\n    b = ii(b, c, d, a, x[i+ 1], 21, -2054922799);\n    a = ii(a, b, c, d, x[i+ 8], 6 ,  1873313359);\n    d = ii(d, a, b, c, x[i+15], 10, -30611744);\n    c = ii(c, d, a, b, x[i+ 6], 15, -1560198380);\n    b = ii(b, c, d, a, x[i+13], 21,  1309151649);\n    a = ii(a, b, c, d, x[i+ 4], 6 , -145523070);\n    d = ii(d, a, b, c, x[i+11], 10, -1120210379);\n    c = ii(c, d, a, b, x[i+ 2], 15,  718787259);\n    b = ii(b, c, d, a, x[i+ 9], 21, -343485551);\n\n    a = add(a, olda);\n    b = add(b, oldb);\n    c = add(c, oldc);\n    d = add(d, oldd);\n  }\n  return rhex(a) + rhex(b) + rhex(c) + rhex(d);\n}\n\nvar token = runtimeScene.getVariables().get(\"token\");\nvar user = runtimeScene.getVariables().get(\"user\");\nvar sig = runtimeScene.getVariables().get(\"sign\");\nvar url = \"https://api.gamejolt.com/api/game/v1_2/users/auth/?gameid=392657&username=\"+VariableString(user)+\"&user_token=\"+VariableString(token)+\"enter private key\";\n\nsig.setString(calcMD5(url));\n\n\n\n",
-              "parameterObjects": ""
+              "parameterObjects": "",
+              "useStrict": false
             },
             {
               "disabled": false,
@@ -12564,8 +13645,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "delete_32save",
-      "name": "delete save",
+      "mangledName": "deletesave",
+      "name": "deletesave",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -12607,6 +13688,18 @@
                 "\"save\""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"menu\"",
+                "yes"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -12637,39 +13730,2801 @@
   "externalEvents": [],
   "eventsFunctionsExtensions": [
     {
-      "description": "",
+      "author": "Tommaso \"Giampiero\" Bresciani",
+      "description": "**Konami Code - by Tommaso \"Giampiero\" Bresciani**\n\nAllows to input the classic Konami Code (*\"Up, Up, Down, Down, Left, Right, Left, Right, B, A\"*) into a scene for cheats and easter eggs.\n\nTo use it, simply **attach the behavior** to any object in a scene and use the Konami Code condition in the editor to trigger your desired effects with events.",
       "extensionNamespace": "",
-      "fullName": "",
-      "name": "NewEventsFunctionsExtension",
-      "version": "",
-      "eventsFunctions": [
+      "fullName": "Konami Code",
+      "name": "KonamiCode",
+      "shortDescription": "Allows to input the classic Konami Code (\"Up, Up, Down, Down, Left, Right, Left, Right, B, A\") into a scene for cheats and easter eggs.",
+      "tags": "Konami Code, Cheats, Easter Egg",
+      "version": "1.0",
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
         {
-          "description": "",
-          "fullName": "md5",
-          "functionType": "Action",
-          "name": "Function",
-          "sentence": "",
-          "events": [
+          "description": "Allows to input the classic Konami Code (\"Up, Up, Down, Down, Left, Right, Left, Right, B, A\") into a scene for cheats and easter eggs.",
+          "fullName": "Konami Code",
+          "name": "KonamiCode",
+          "objectType": "",
+          "eventsFunctions": [
             {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::JsCode",
-              "inlineCode": "/*\n * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message\n * Digest Algorithm, as defined in RFC 1321.\n * Copyright (C) Paul Johnston 1999 - 2000.\n * Updated by Greg Holt 2000 - 2001.\n * See http://pajhome.org.uk/site/legal.html for details.\n */\n\n/*\n * Convert a 32-bit number to a hex string with ls-byte first\n */\nvar hex_chr = \"0123456789abcdef\";\nfunction rhex(num)\n{\n  str = \"\";\n  for(j = 0; j <= 3; j++)\n    str += hex_chr.charAt((num >> (j * 8 + 4)) & 0x0F) +\n           hex_chr.charAt((num >> (j * 8)) & 0x0F);\n  return str;\n}\n\n/*\n * Convert a string to a sequence of 16-word blocks, stored as an array.\n * Append padding bits and the length, as described in the MD5 standard.\n */\nfunction str2blks_MD5(str)\n{\n  nblk = ((str.length + 8) >> 6) + 1;\n  blks = new Array(nblk * 16);\n  for(i = 0; i < nblk * 16; i++) blks[i] = 0;\n  for(i = 0; i < str.length; i++)\n    blks[i >> 2] |= str.charCodeAt(i) << ((i % 4) * 8);\n  blks[i >> 2] |= 0x80 << ((i % 4) * 8);\n  blks[nblk * 16 - 2] = str.length * 8;\n  return blks;\n}\n\n/*\n * Add integers, wrapping at 2^32. This uses 16-bit operations internally \n * to work around bugs in some JS interpreters.\n */\nfunction add(x, y)\n{\n  var lsw = (x & 0xFFFF) + (y & 0xFFFF);\n  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);\n  return (msw << 16) | (lsw & 0xFFFF);\n}\n\n/*\n * Bitwise rotate a 32-bit number to the left\n */\nfunction rol(num, cnt)\n{\n  return (num << cnt) | (num >>> (32 - cnt));\n}\n\n/*\n * These functions implement the basic operation for each round of the\n * algorithm.\n */\nfunction cmn(q, a, b, x, s, t)\n{\n  return add(rol(add(add(a, q), add(x, t)), s), b);\n}\nfunction ff(a, b, c, d, x, s, t)\n{\n  return cmn((b & c) | ((~b) & d), a, b, x, s, t);\n}\nfunction gg(a, b, c, d, x, s, t)\n{\n  return cmn((b & d) | (c & (~d)), a, b, x, s, t);\n}\nfunction hh(a, b, c, d, x, s, t)\n{\n  return cmn(b ^ c ^ d, a, b, x, s, t);\n}\nfunction ii(a, b, c, d, x, s, t)\n{\n  return cmn(c ^ (b | (~d)), a, b, x, s, t);\n}\n\n/*\n * Take a string and return the hex representation of its MD5.\n */\nfunction calcMD5(str)\n{\n  x = str2blks_MD5(str);\n  a =  1732584193;\n  b = -271733879;\n  c = -1732584194;\n  d =  271733878;\n\n  for(i = 0; i < x.length; i += 16)\n  {\n    olda = a;\n    oldb = b;\n    oldc = c;\n    oldd = d;\n\n    a = ff(a, b, c, d, x[i+ 0], 7 , -680876936);\n    d = ff(d, a, b, c, x[i+ 1], 12, -389564586);\n    c = ff(c, d, a, b, x[i+ 2], 17,  606105819);\n    b = ff(b, c, d, a, x[i+ 3], 22, -1044525330);\n    a = ff(a, b, c, d, x[i+ 4], 7 , -176418897);\n    d = ff(d, a, b, c, x[i+ 5], 12,  1200080426);\n    c = ff(c, d, a, b, x[i+ 6], 17, -1473231341);\n    b = ff(b, c, d, a, x[i+ 7], 22, -45705983);\n    a = ff(a, b, c, d, x[i+ 8], 7 ,  1770035416);\n    d = ff(d, a, b, c, x[i+ 9], 12, -1958414417);\n    c = ff(c, d, a, b, x[i+10], 17, -42063);\n    b = ff(b, c, d, a, x[i+11], 22, -1990404162);\n    a = ff(a, b, c, d, x[i+12], 7 ,  1804603682);\n    d = ff(d, a, b, c, x[i+13], 12, -40341101);\n    c = ff(c, d, a, b, x[i+14], 17, -1502002290);\n    b = ff(b, c, d, a, x[i+15], 22,  1236535329);    \n\n    a = gg(a, b, c, d, x[i+ 1], 5 , -165796510);\n    d = gg(d, a, b, c, x[i+ 6], 9 , -1069501632);\n    c = gg(c, d, a, b, x[i+11], 14,  643717713);\n    b = gg(b, c, d, a, x[i+ 0], 20, -373897302);\n    a = gg(a, b, c, d, x[i+ 5], 5 , -701558691);\n    d = gg(d, a, b, c, x[i+10], 9 ,  38016083);\n    c = gg(c, d, a, b, x[i+15], 14, -660478335);\n    b = gg(b, c, d, a, x[i+ 4], 20, -405537848);\n    a = gg(a, b, c, d, x[i+ 9], 5 ,  568446438);\n    d = gg(d, a, b, c, x[i+14], 9 , -1019803690);\n    c = gg(c, d, a, b, x[i+ 3], 14, -187363961);\n    b = gg(b, c, d, a, x[i+ 8], 20,  1163531501);\n    a = gg(a, b, c, d, x[i+13], 5 , -1444681467);\n    d = gg(d, a, b, c, x[i+ 2], 9 , -51403784);\n    c = gg(c, d, a, b, x[i+ 7], 14,  1735328473);\n    b = gg(b, c, d, a, x[i+12], 20, -1926607734);\n    \n    a = hh(a, b, c, d, x[i+ 5], 4 , -378558);\n    d = hh(d, a, b, c, x[i+ 8], 11, -2022574463);\n    c = hh(c, d, a, b, x[i+11], 16,  1839030562);\n    b = hh(b, c, d, a, x[i+14], 23, -35309556);\n    a = hh(a, b, c, d, x[i+ 1], 4 , -1530992060);\n    d = hh(d, a, b, c, x[i+ 4], 11,  1272893353);\n    c = hh(c, d, a, b, x[i+ 7], 16, -155497632);\n    b = hh(b, c, d, a, x[i+10], 23, -1094730640);\n    a = hh(a, b, c, d, x[i+13], 4 ,  681279174);\n    d = hh(d, a, b, c, x[i+ 0], 11, -358537222);\n    c = hh(c, d, a, b, x[i+ 3], 16, -722521979);\n    b = hh(b, c, d, a, x[i+ 6], 23,  76029189);\n    a = hh(a, b, c, d, x[i+ 9], 4 , -640364487);\n    d = hh(d, a, b, c, x[i+12], 11, -421815835);\n    c = hh(c, d, a, b, x[i+15], 16,  530742520);\n    b = hh(b, c, d, a, x[i+ 2], 23, -995338651);\n\n    a = ii(a, b, c, d, x[i+ 0], 6 , -198630844);\n    d = ii(d, a, b, c, x[i+ 7], 10,  1126891415);\n    c = ii(c, d, a, b, x[i+14], 15, -1416354905);\n    b = ii(b, c, d, a, x[i+ 5], 21, -57434055);\n    a = ii(a, b, c, d, x[i+12], 6 ,  1700485571);\n    d = ii(d, a, b, c, x[i+ 3], 10, -1894986606);\n    c = ii(c, d, a, b, x[i+10], 15, -1051523);\n    b = ii(b, c, d, a, x[i+ 1], 21, -2054922799);\n    a = ii(a, b, c, d, x[i+ 8], 6 ,  1873313359);\n    d = ii(d, a, b, c, x[i+15], 10, -30611744);\n    c = ii(c, d, a, b, x[i+ 6], 15, -1560198380);\n    b = ii(b, c, d, a, x[i+13], 21,  1309151649);\n    a = ii(a, b, c, d, x[i+ 4], 6 , -145523070);\n    d = ii(d, a, b, c, x[i+11], 10, -1120210379);\n    c = ii(c, d, a, b, x[i+ 2], 15,  718787259);\n    b = ii(b, c, d, a, x[i+ 9], 21, -343485551);\n\n    a = add(a, olda);\n    b = add(b, oldb);\n    c = add(c, oldc);\n    d = add(d, oldd);\n  }\n  return rhex(a) + rhex(b) + rhex(c) + rhex(d);\n}\n",
-              "parameterObjects": ""
-            }
-          ],
-          "parameters": [
+              "description": "",
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "disabled": false,
+                  "folded": false,
+                  "name": "Konami Code",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Initialize",
+                      "comment2": ""
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": [],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SetReturnBoolean"
+                          },
+                          "parameters": [
+                            "False"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "KC",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
+                            "KC_IsCompleted",
+                            "=",
+                            "\"False\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
+                            "KC_LastKeyIsUp",
+                            "=",
+                            "\"False\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"KC_InputTimer\""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
+                            "KC_KeyPressed",
+                            "=",
+                            "LastPressedKey()"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "KC",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": [],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"KC_InputTimer\""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarSceneTxt"
+                          },
+                          "parameters": [
+                            "KC_LastKeyIsUp",
+                            "=",
+                            "\"True\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": [],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
+                            "KC_KeyPressed",
+                            "=",
+                            "\"NoDirection\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
+                            "KC_LastKeyIsUp",
+                            "=",
+                            "\"False\""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Timer"
+                          },
+                          "parameters": [
+                            "KC_LastKeyIsUp",
+                            "1.5",
+                            "\"KC_InputTimer\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": [],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "KC",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "disabled": false,
+                      "folded": false,
+                      "name": "Inputs",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "UP-1",
+                          "comment2": ""
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarSceneTxt"
+                              },
+                              "parameters": [
+                                "KC_LastKeyIsUp",
+                                "=",
+                                "\"False\""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AnyKeyPressed"
+                              },
+                              "parameters": [
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "=",
+                                    "\"Up\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "+",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ResetTimer"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"KC_InputTimer\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "!=",
+                                    "\"Up\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "KeyReleased"
+                              },
+                              "parameters": [
+                                "",
+                                "Up"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "+",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "UP-2",
+                          "comment2": ""
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "2"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AnyKeyPressed"
+                              },
+                              "parameters": [
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "=",
+                                    "\"Up\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "+",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ResetTimer"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"KC_InputTimer\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "!=",
+                                    "\"Up\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "3"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "KeyReleased"
+                              },
+                              "parameters": [
+                                "",
+                                "Up"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "+",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "DOWN-1",
+                          "comment2": ""
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "4"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AnyKeyPressed"
+                              },
+                              "parameters": [
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "=",
+                                    "\"Down\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "+",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ResetTimer"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"KC_InputTimer\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "!=",
+                                    "\"Down\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarSceneTxt"
+                                      },
+                                      "parameters": [
+                                        "KC_KeyPressed",
+                                        "=",
+                                        "\"Up\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarSceneTxt"
+                                      },
+                                      "parameters": [
+                                        "KC_LastKeyIsUp",
+                                        "=",
+                                        "\"True\""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "5"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "KeyReleased"
+                              },
+                              "parameters": [
+                                "",
+                                "Down"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "+",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "DOWN-2",
+                          "comment2": ""
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "6"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AnyKeyPressed"
+                              },
+                              "parameters": [
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "=",
+                                    "\"Down\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "+",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ResetTimer"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"KC_InputTimer\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "!=",
+                                    "\"Down\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarSceneTxt"
+                                      },
+                                      "parameters": [
+                                        "KC_KeyPressed",
+                                        "=",
+                                        "\"Up\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarSceneTxt"
+                                      },
+                                      "parameters": [
+                                        "KC_LastKeyIsUp",
+                                        "=",
+                                        "\"True\""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "7"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "KeyReleased"
+                              },
+                              "parameters": [
+                                "",
+                                "Down"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "+",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "LEFT-1",
+                          "comment2": ""
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "8"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AnyKeyPressed"
+                              },
+                              "parameters": [
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "=",
+                                    "\"Left\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "+",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ResetTimer"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"KC_InputTimer\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "!=",
+                                    "\"Left\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarSceneTxt"
+                                      },
+                                      "parameters": [
+                                        "KC_KeyPressed",
+                                        "=",
+                                        "\"Up\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarSceneTxt"
+                                      },
+                                      "parameters": [
+                                        "KC_LastKeyIsUp",
+                                        "=",
+                                        "\"True\""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "9"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "KeyReleased"
+                              },
+                              "parameters": [
+                                "",
+                                "Left"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "+",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "RIGHT-1",
+                          "comment2": ""
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "10"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AnyKeyPressed"
+                              },
+                              "parameters": [
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "=",
+                                    "\"Right\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "+",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ResetTimer"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"KC_InputTimer\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "!=",
+                                    "\"Right\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarSceneTxt"
+                                      },
+                                      "parameters": [
+                                        "KC_KeyPressed",
+                                        "=",
+                                        "\"Up\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarSceneTxt"
+                                      },
+                                      "parameters": [
+                                        "KC_LastKeyIsUp",
+                                        "=",
+                                        "\"True\""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "11"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "KeyReleased"
+                              },
+                              "parameters": [
+                                "",
+                                "Right"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "+",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "LEFT-2",
+                          "comment2": ""
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "12"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AnyKeyPressed"
+                              },
+                              "parameters": [
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "=",
+                                    "\"Left\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "+",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ResetTimer"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"KC_InputTimer\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "!=",
+                                    "\"Left\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarSceneTxt"
+                                      },
+                                      "parameters": [
+                                        "KC_KeyPressed",
+                                        "=",
+                                        "\"Up\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarSceneTxt"
+                                      },
+                                      "parameters": [
+                                        "KC_LastKeyIsUp",
+                                        "=",
+                                        "\"True\""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "13"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "KeyReleased"
+                              },
+                              "parameters": [
+                                "",
+                                "Left"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "+",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "RIGHT-2",
+                          "comment2": ""
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "14"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AnyKeyPressed"
+                              },
+                              "parameters": [
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "=",
+                                    "\"Right\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "+",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ResetTimer"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"KC_InputTimer\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "!=",
+                                    "\"Right\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarSceneTxt"
+                                      },
+                                      "parameters": [
+                                        "KC_KeyPressed",
+                                        "=",
+                                        "\"Up\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarSceneTxt"
+                                      },
+                                      "parameters": [
+                                        "KC_LastKeyIsUp",
+                                        "=",
+                                        "\"True\""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "15"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "KeyReleased"
+                              },
+                              "parameters": [
+                                "",
+                                "Right"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "+",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "B",
+                          "comment2": ""
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "16"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AnyKeyPressed"
+                              },
+                              "parameters": [
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "=",
+                                    "\"b\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "+",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ResetTimer"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"KC_InputTimer\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "!=",
+                                    "\"b\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarSceneTxt"
+                                      },
+                                      "parameters": [
+                                        "KC_KeyPressed",
+                                        "=",
+                                        "\"Up\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarSceneTxt"
+                                      },
+                                      "parameters": [
+                                        "KC_LastKeyIsUp",
+                                        "=",
+                                        "\"True\""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "17"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "KeyReleased"
+                              },
+                              "parameters": [
+                                "",
+                                "b"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "+",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "A",
+                          "comment2": ""
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "18"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AnyKeyPressed"
+                              },
+                              "parameters": [
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "=",
+                                    "\"a\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "+",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "RemoveTimer"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"KC_InputTimer\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "KC_KeyPressed",
+                                    "!=",
+                                    "\"a\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "KC",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarSceneTxt"
+                                      },
+                                      "parameters": [
+                                        "KC_KeyPressed",
+                                        "=",
+                                        "\"Up\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarSceneTxt"
+                                      },
+                                      "parameters": [
+                                        "KC_LastKeyIsUp",
+                                        "=",
+                                        "\"True\""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "=",
+                                "19"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "KeyReleased"
+                              },
+                              "parameters": [
+                                "",
+                                "a"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "KC",
+                                "+",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarSceneTxt"
+                              },
+                              "parameters": [
+                                "KC_IsCompleted",
+                                "=",
+                                "\"True\""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        }
+                      ],
+                      "parameters": []
+                    }
+                  ],
+                  "parameters": []
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "KonamiCode::KonamiCode",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
             {
-              "codeOnly": false,
-              "defaultValue": "",
-              "description": "hash",
-              "name": "hash",
-              "optional": false,
-              "supplementaryInformation": "",
-              "type": "string"
+              "description": "Checks if the Konami Code is correctly inputted.",
+              "fullName": "Is Inputted",
+              "functionType": "Condition",
+              "name": "KC_Inputted",
+              "sentence": "Konami Code is inputted with _PARAM0_",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarSceneTxt"
+                      },
+                      "parameters": [
+                        "KC_IsCompleted",
+                        "=",
+                        "\"True\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "no"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "KonamiCode::KonamiCode",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
             }
-          ],
-          "objectGroups": []
+          ]
         }
       ]
     }

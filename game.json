@@ -1585,6 +1585,22 @@
         "metadata": "",
         "name": "audio\\mus_battle1.ogg",
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Sprites/titlebg (2).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sprites\\titlebg (2).png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "audio/mus_menu0.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio\\mus_menu0.ogg",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1619,11 +1635,16 @@
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/delete-save"
+      "referenceTo": "/layouts/deletesave"
     }
   ],
   "externalEvents": [],
-  "eventsFunctionsExtensions": [],
+  "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/konamicode"
+    }
+  ],
   "externalLayouts": [],
   "externalSourceFiles": []
 }

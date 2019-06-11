@@ -295,11 +295,14 @@
   "objects": [
     {
       "name": "Player",
+      "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
       "behaviors": [
         {
+          "name": "TopDownMovement",
+          "type": "TopDownMovementBehavior::TopDownMovementBehavior",
           "acceleration": 100000000000000000,
           "allowDiagonals": true,
           "angleOffset": 0,
@@ -307,9 +310,7 @@
           "deceleration": 800,
           "ignoreDefaultControls": false,
           "maxSpeed": 200,
-          "name": "TopDownMovement",
-          "rotateObject": false,
-          "type": "TopDownMovementBehavior::TopDownMovementBehavior"
+          "rotateObject": false
         }
       ],
       "animations": [
@@ -1133,6 +1134,7 @@
     },
     {
       "name": "background",
+      "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
@@ -1171,6 +1173,7 @@
     },
     {
       "name": "trigger",
+      "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -1243,6 +1246,7 @@
     },
     {
       "name": "collision",
+      "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
@@ -1313,6 +1317,7 @@
       "italic": false,
       "name": "NewObject",
       "smoothed": true,
+      "tags": "",
       "type": "TextObject::Text",
       "underlined": false,
       "variables": [],
